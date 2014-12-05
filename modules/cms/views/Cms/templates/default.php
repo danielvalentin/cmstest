@@ -4,10 +4,8 @@
 	<title>CMS | <?php echo cms::option('sitename'); ?></title>
 	<?php echo HTML::style('cms/media/css/bootstrap.min.css'); ?>
 	<?php echo HTML::style('cms/media/libs/fontawesome/css/font-awesome.min.css'); ?>
-	<?php echo HTML::style('cms/media/libs/jgrowl/jquery.jgrowl.css'); ?>
 	<?php echo HTML::style('cms/media/libs/jquery-file-upload/css/jquery.fileupload-ui.css'); ?>
-	<?php echo HTML::style('cms/media/css/datepicker.css'); ?>
-	<?php echo HTML::style('cms/media/css/global.css'); ?>
+	<?php echo HTML::style('cms/media/css/style.css'); ?>
 </head>
 <body>
 

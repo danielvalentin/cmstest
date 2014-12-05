@@ -1,0 +1,57 @@
+.tags
+{
+	margin:0;
+	padding:0 10px;
+	right:24px;
+	bottom:-12px;
+	list-style:none;
+}
+	.tags .tag
+	{
+		padding:0;
+		margin:0;
+		list-style-type:none;
+		margin-right:12px;
+		display:inline-block;
+		margin-bottom:5px;
+		height:24px;
+		line-height:24px;
+		position:relative;
+		
+		background:#428BCA;
+		display:inline-block;
+		padding:0 5px;
+		color:#FFF;
+		border-bottom-right-radius:4px;
+		border-top-right-radius:4px;
+	}
+	.tags .tag:before
+	{
+		content:"";
+		float:left;
+		position:absolute;
+		top:0;
+		left:-12px;
+		width:0;
+		height:0;
+		border-color:transparent #428BCA transparent transparent;
+		border-style:solid;
+		border-width:12px 12px 12px 0;
+	}
+		.tags .tag span
+		{
+			
+		}
+		.tags .tag a
+		{
+			color:#FFF;
+		}
+		.tags .tag a:hover
+		{
+			text-decoration:none;
+		}
+		.tags .tag .remove
+		{
+			margin-left:5px;
+			font-size:0.8em;
+		}

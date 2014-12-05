@@ -342,7 +342,7 @@
 						<div class="form-group">
 							<label for="publishdate"><?php echo __('Publishdate') ?>:</label>
 							<div class="form-group">
-								<input type="text" class="form-control" name="publishdate" data-bind="datepicker:true" value="<?php echo date('d-m-Y', ($content->published!=0?$content->published:date())); ?>" />
+								<input type="text" class="form-control" name="publishdate" data-bind="datepicker:true" value="<?php echo date('d-m-Y', ($content->published!=0?$content->published:time())); ?>" />
 							</div>
 						</div>
 					<?php endif; ?>
@@ -426,7 +426,7 @@
 					<div class="widget-body">
 						<div class="categorylist" id="categorylist">
 <?php
-							$view = view::factory('cms/content/categories/checkboxes');
+							$view = view::factory('Cms/Content/categories/checkboxes');
 							$view->content = $content;
 							echo $view->render();
 ?>
@@ -548,7 +548,7 @@
 <?php
 			if($content->contenttype->supports('categories'))
 			{
-				$view = view::factory('cms/content/categories/dropdown');
+				$view = view::factory('Cms/Content/categories/dropdown');
 				$view->content = $content;
 				echo $view->render();
 			}

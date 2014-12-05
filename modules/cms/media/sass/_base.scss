@@ -1,0 +1,24 @@
+.well,
+.form-control,
+.nav-pills > li > a
+{
+	border-radius: 0;
+}
+select
+{
+	cursor: pointer;
+}
+a:hover,
+.imglink:hover
+{
+	text-decoration:none;
+}
+	a small
+	{
+		color:#999;
+	}
+.centeredtd
+{
+	vertical-align:middle !important;
+	text-align:center;
+}
