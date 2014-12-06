@@ -10,40 +10,44 @@
 <body>
 
 <div class="container" id="wrap">
-	<div class="row" id="header">
-		<div class="col-xs-2">
+	<header class="row" id="header">
+		<div class="col-xs-2 logo">
 			<h1>
-				<a href="#" title="CMS">CMS</a>
+				<a href="#" title="CMS"><?php echo cms::option('sitename', 'CMS'); ?></a>
 			</h1>
 		</div>
-		<div class="col-xs-2">
-			<div data-bind="loader:loading()"></div>
-		</div>
-		<div class="col-xs-8 text-right">
-			<div class="btn btn-default">
-				<?php echo __('Hello :name', array(':name' => user::get()->name)); ?>!
+		<div class="col-xs-10 actions">
+			<div class="row">
+				<div class="col-xs-2">
+					<div data-bind="loader:loading()"></div>
+				</div>
+				<div class="col-xs-10 text-right">
+					<div class="btn btn-default">
+						<?php echo __('Hello :name', array(':name' => user::get()->name)); ?>!
+					</div>
+					<a href="#" id="header-filesbtn" class="btn btn-default" title="<?php echo __('Browse files'); ?>">
+						<span class="glyphicon glyphicon-floppy-disk"></span>
+					</a>
+					<a href="#/messages" class="btn btn-default" data-bind="css:{'btn-default':unread_messages()==0,'btn-warning':unread_messages()>0}">
+						<span class="glyphicon glyphicon-envelope"></span>
+						<span data-bind="text:unread_messages(),visible:unread_messages()>0"></span>
+					</a>
+					<a href="#" class="btn btn-info" id="site-info">
+						<span class="glyphicon glyphicon-user"></span>
+						<span data-bind="text:current_visitors()">0</span>
+					</a>
+					<?php if(user::logged('developer')): ?>
+						<a href="#/super" class="btn btn-primary" title="Superadmin">
+							<span class="glyphicon glyphicon-lock"></span>
+						</a>
+					<?php endif; ?>
+					<a href="<?php echo URL::site(localization::get('users.urls.logout')); ?>" data-bind="click:logout" class="btn btn-danger" title="<?php echo __('Log out') ?>">
+						<span class="glyphicon glyphicon-off"></span>
+					</a>
+				</div>
 			</div>
-			<a href="#" id="header-filesbtn" class="btn btn-default" title="<?php echo __('Browse files'); ?>">
-				<span class="glyphicon glyphicon-floppy-disk"></span>
-			</a>
-			<a href="#/messages" class="btn btn-default" data-bind="css:{'btn-default':unread_messages()==0,'btn-warning':unread_messages()>0}">
-				<span class="glyphicon glyphicon-envelope"></span>
-				<span data-bind="text:unread_messages(),visible:unread_messages()>0"></span>
-			</a>
-			<a href="#" class="btn btn-info" id="site-info">
-				<span class="glyphicon glyphicon-user"></span>
-				<span data-bind="text:current_visitors()">0</span>
-			</a>
-			<?php if(user::logged('developer')): ?>
-				<a href="#/super" class="btn btn-primary" title="Superadmin">
-					<span class="glyphicon glyphicon-lock"></span>
-				</a>
-			<?php endif; ?>
-			<a href="<?php echo URL::site(localization::get('users.urls.logout')); ?>" data-bind="click:logout" class="btn btn-danger" title="<?php echo __('Log out') ?>">
-				<span class="glyphicon glyphicon-off"></span>
-			</a>
 		</div>
-	</div>
+	</header>
 	<div class="row" id="mainwrap">
 		<div class="col-xs-12 col-md-2" id="sidebar">
 			<ul class="nav nav-pills nav-stacked">
@@ -127,12 +131,12 @@
 			</ul>
 		</div>
 		
-		<div class="col-xs-12 col-md-10" id="content">
+		<div class="col-xs-12 col-md-10 col-md-offset-2" id="content">
 			<div id="content-holder"></div>
+			<footer class="row" id="footer"></footer>
 		</div>
 		
 	</div>
-	<div class="row" id="footer"></div>
 </div>
 
 <?php echo View::factory('Cms/Modals/filebrowser'); ?>

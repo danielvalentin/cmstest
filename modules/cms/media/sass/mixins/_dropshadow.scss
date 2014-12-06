@@ -1,7 +1,7 @@
 @mixin drop-shadow($depth) {
 	@if $depth == 0 {
-		box-shadow: 0 1px 1px rgba(black, 0.24),
-		0 1px 3px rgba(black, 0.05);
+		box-shadow: 0 1px 3px rgba(black, 0.1),
+		0 2px 5px rgba(black, 0.05);
 	}
 	@if $depth == 1 {
 		box-shadow: 0 1.5px 3px rgba(black, 0.24),

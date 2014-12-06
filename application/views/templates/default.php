@@ -68,7 +68,7 @@
 <div class="container" id="footerwrap">
 	<footer class="row">
 		<div class="col-xs-12">
-			Footer
+			<?php echo cms::option('footertext'); ?>
 		</div>
 	</footer>
 </div>

@@ -39,10 +39,10 @@
 				}
 ?>
 			</select>
-			<a href="#" title="Tilføj nyt panel" class="btn btn-sm btn-default">
+			<a href="#" title="<?php echo __('Add new panel') ?>" class="btn btn-sm btn-default">
 				<span class="glyphicon glyphicon-plus"></span>
 			</a>
-			<a href="#" data-bind="click:deleteDashboard" title="Slet dette panel" class="btn btn-sm btn-danger">
+			<a href="#" data-bind="click:deleteDashboard" title="<?php echo __('Delete this panel') ?>" class="btn btn-sm btn-danger">
 				<span class="glyphicon glyphicon-trash"></span>
 			</a>
 		</div>
@@ -66,7 +66,7 @@
 		<form class="form-inline">
 			<div class="form-group">
 				<select class="form-control widget-types" data-bind="">
-					<option value="0" selected="selected">Tilføj widget</option>
+					<option value="0" selected="selected"><?php echo __('Select widget') ?></option>
 <?php
 					$widgets = ORM::factory('Widgettype')->find_all();
 					if((bool)$widgets->count())
@@ -78,7 +78,7 @@
 					}
 ?>
 				</select>
-				<button class="btn btn-default" data-bind="click:addWidget">Tilføj</button>
+				<button class="btn btn-primary" data-bind="click:addWidget"><?php echo __('Add') ?></button>
 			</div>
 		</form>
 	</div>

@@ -104,7 +104,7 @@ if (isset($_SERVER['KOHANA_ENV']))
  */
 
 Kohana::init(array(
-	'index_file' => ''
+	'index_file' => '',
 ));
 
 /**

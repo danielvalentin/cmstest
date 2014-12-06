@@ -1,6 +1,18 @@
 .btn
 {
 	border-radius:0;
+	border:0;
+	
+	&.btn-primary
+	{
+		background-color:$color-blue;
+	}
+	
+	&.btn-danger
+	{
+		background-color:$color-red;
+	}
+	
 	&:hover
 	{
 		@include drop-shadow(2);

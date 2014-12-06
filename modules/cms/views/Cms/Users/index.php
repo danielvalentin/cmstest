@@ -1,5 +1,5 @@
 <div class="page-header">
-	<h1><?php echo __('Brugere'); ?></h1>
+	<h1><?php echo __('Users'); ?></h1>
 </div>
 
 <script type="text/javascript">

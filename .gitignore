@@ -2,3 +2,4 @@
 files/*
 node_modules/*
 .sass-cache/*
+modules/cms/media/css/*

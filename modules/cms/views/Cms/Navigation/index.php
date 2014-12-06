@@ -6,7 +6,7 @@
 	
 	<div class="col-xs-12 col-md-9">
 		
-		<div class="well">
+		<div>
 			<div class="form-group">
 				<label for="navigation-select-menu"><?php echo __('Select menu to edit'); ?></label>
 				<select class="form-control" data-bind="options:menus,optionsText:'title',optionsValue:'id',optionsCaption:'<?php _e('Select'); ?>',value:menuid"></select>
@@ -30,6 +30,8 @@
 				</div>
 			</div>
 		</div>
+		
+		<hr />
 		
 		<div data-bind="if:menu()">
 			<h2 data-bind="visible:!editingMenuTitle()">
