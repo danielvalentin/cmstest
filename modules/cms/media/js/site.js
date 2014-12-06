@@ -104,8 +104,7 @@ define([
 				height:300,
 				theme_advanced_resizing: true,
 				theme_advanced_resizing_use_cookie : false,
-				language:'da',
-				content_css:this.url+'media/css/tinymce.css'
+				language:'en'
 			});
 		};
 		

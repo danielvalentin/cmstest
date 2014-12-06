@@ -32,7 +32,7 @@
 						echo '<div class="tab-pane'.($i==1?' active':'').'" id="tab-'.$group->slug.'">';
 						foreach($group->options->where('editable','=',1)->find_all() as $option)
 						{
-							echo '<div class="form-group well option" data-optionid="'.$option->id.'">';
+							echo '<div class="form-group option" data-optionid="'.$option->id.'">';
 							echo '<label for="option-' . $option -> id . '">' . $option -> title . '</label>';
 							switch($option->type)
 							{
